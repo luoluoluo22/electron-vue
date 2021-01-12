@@ -10,7 +10,7 @@
       <!-- 动态组件 -->
       <component :is='is_which'></component>
     </keep-alive>
-    <design-template></design-template>
+    <template></template>
 
     <!-- 左侧_模板选择 -->
     <div id="l_template" v-show='current_id===0'>
@@ -69,7 +69,7 @@ export default {
     }
   },
   components: {
-    background, designTemplate
+    background, design_template
   },
   methods: {
     set_canvas_bg_img: function () {

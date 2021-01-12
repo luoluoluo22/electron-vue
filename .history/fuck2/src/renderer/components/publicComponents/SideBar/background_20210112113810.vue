@@ -23,8 +23,6 @@ export default {
 <style scoped lang= "scss">
 
 div{
-  z-index:999;
-  top: 800px;
-  left: 900px;
+  z-index:999
 }
 </style>

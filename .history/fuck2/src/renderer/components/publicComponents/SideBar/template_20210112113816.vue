@@ -1,6 +1,6 @@
 <template>
   <div >
-    background
+    template
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
 
    data () {
      return {
-       name: 'background'
+       name: 'template'
      }
    },
 
@@ -21,10 +21,8 @@ export default {
 </script>
 
 <style scoped lang= "scss">
-
 div{
   z-index:999;
-  top: 800px;
-  left: 900px;
 }
+
 </style>

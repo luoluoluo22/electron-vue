@@ -10,7 +10,7 @@
       <!-- 动态组件 -->
       <component :is='is_which'></component>
     </keep-alive>
-    <design-template></design-template>
+    <template></template>
 
     <!-- 左侧_模板选择 -->
     <div id="l_template" v-show='current_id===0'>
@@ -27,7 +27,7 @@
 <script>
 
 import background from './SideBar/background'
-import designTemplate from './SideBar/designTemplate'
+import template from './SideBar/template1'
 
 const axios = require('axios')
 let urls = []// 图片地址
@@ -42,7 +42,7 @@ export default {
       name: 'side-bar',
       template_banner_src: [],
       current_id: 0,
-      is_which: 'designTemplate', // 选中项
+      is_which: 'background', // 选中项
       side_list: [{
         id: 0,
         name: 'template-library',
@@ -69,7 +69,7 @@ export default {
     }
   },
   components: {
-    background, designTemplate
+    background, btemplate
   },
   methods: {
     set_canvas_bg_img: function () {

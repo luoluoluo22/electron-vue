@@ -24,7 +24,6 @@ export default {
 
 div{
   z-index:999;
-  top: 800px;
-  left: 900px;
+  top: 0;
 }
 </style>

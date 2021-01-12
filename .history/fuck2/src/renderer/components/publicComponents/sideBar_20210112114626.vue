@@ -69,7 +69,7 @@ export default {
     }
   },
   components: {
-    background, designTemplate
+    background, design_template
   },
   methods: {
     set_canvas_bg_img: function () {

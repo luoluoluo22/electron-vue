@@ -1,0 +1,72 @@
+<template>
+  <div >
+    <button type="button" class="btn_primary btn"   v-if="btn_type==='primary'"><slot></slot></button>
+    <button type="button" class="btn"  v-else ><slot></slot></button>
+  </div>
+</template>
+
+<script>
+ 
+export default {
+   // 父级单位传输数据的入口
+   props: {
+     btn_type: {
+       type: String,
+       default: null
+     }
+   },
+ 
+   data () {
+     return {
+       name: 'btnComponent'
+     }
+   },
+
+   methods: {
+     btn_click: function() { console.log(`${this.name}进行了点击`) }
+   }
+ }
+</script>
+
+<style scoped >
+
+/* 在此处设置部分通用属性值 */
+  
+.btn{
+    color: var(--color);
+    background-color: var(--white_color);
+    border:none;
+    cursor: pointer;
+    border-radius: var(--border_radius);
+    width: var(--btn_width);
+    height: var(--btn_height);
+    font-size: var(--font_size);
+    line-height: var(--btn_height);
+}
+  
+.btn_primary{
+    color: var(--Brand_Color);
+    background-color: var(--white_color);
+}
+
+.btn:hover{
+    transition:var(--transition_speed);/*所有样式都进行过渡，过渡总时间，先慢后快，延迟时间*/  
+    box-shadow:var(--shadow);
+    z-index:100
+}
+
+.btn:focus {
+    outline: var(--outline); 
+}
+
+.btn:active{
+    color: var(--bg_color);
+    background-color :var(--color);
+}
+
+.btn_primary:active{
+    color: var(--color);
+    background-color:var(--bg_color);
+}
+
+</style>

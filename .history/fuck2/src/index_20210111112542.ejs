@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-07 21:49:22
+ * @LastEditTime: 2021-01-09 09:19:27
+ * @LastEditors: Please set LastEditors
+ * @Description: 这是主入口文件
+ * @FilePath: /electron-vue/fuck2/src/index.ejs
+-->
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <% if (htmlWebpackPlugin.options.nodeModules) { %>
+    <!-- Add `node_modules/` to global paths so `require` works properly in development -->
+    <script>
+      require('module').globalPaths.push('<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, '\\\\') %>')
+    </script>
+    <% } %>
+
+    <!-- 引入icon -->
+    <link rel="stylesheet" href="~@//"/>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <!-- Set `__static` path to static files in production -->
+    <% if (!htmlWebpackPlugin.options.isBrowser &&
+    !htmlWebpackPlugin.options.isDevelopment) { %>
+    <script>
+      window.__static = require('path')
+        .join(__dirname, '/static')
+        .replace(/\\/g, '\\\\')
+    </script>
+    <% } %>
+
+    <!-- webpack builds are automatically injected -->
+  </body>
+</html>

@@ -37,12 +37,7 @@ export default new Vuex.Store({
   },
 
   // 异步加载
-  // actions: {
-  //   get_msg_list(store) {
-  //     setTimeout(store.commit('current_page', 'banner1'), 1000)
-  //   }
-
-  },
+  ac
 
   modules,
   plugins: [

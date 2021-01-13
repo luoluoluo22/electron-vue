@@ -25,15 +25,12 @@
         this.$electron.shell.openExternal(link)
       },
       get_msg() {
-        this.$store.dispatch('get_msg_list')
+        this.$store.dispatch
       }
     },
     mounted: function () {
       // this.update_bg_urls()
       this.$store.commit('current_page', this.name) // 提交到store中修改
-
-      // 异步加载
-      // this.get_msg()
     }
   }
 </script>

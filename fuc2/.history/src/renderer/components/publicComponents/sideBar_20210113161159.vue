@@ -18,7 +18,8 @@ export default {
     return {
       name: 'side-bar',
       is_show: true,
-      current_show: null
+      count: 0,
+      current_show:
     }
   },
   components: {
@@ -26,11 +27,10 @@ export default {
   },
   methods: {
     show_router: function(e) {
-      if (e.view.location.hash === this.current_show) {
+      // this.is_show = !this.is_show
+      console.log(e.view.location.hash)
+      if (e.view.location.hash === '#/banner/template') {
         this.is_show = !this.is_show
-        this.current_show = e.view.location.hash
-      } else {
-        this.current_show = e.view.location.hash
       }
     }
   }

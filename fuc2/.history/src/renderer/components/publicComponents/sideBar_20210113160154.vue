@@ -1,9 +1,9 @@
 <template>
   <div>
     <ul>
-      <router-link to="/banner/template" tag='i' active-class='active_class' class="iconfont" @click.native="show_router($event)">&#xe625;</router-link>
-      <router-link to="/banner/layout" tag='i' active-class='active_class' class="iconfont" @click.native="show_router($event)">&#xe655;</router-link>
-      <router-link to="/banner/bg" tag='i' active-class='active_class' class="iconfont" @click.native="show_router($event)">&#xe609;</router-link>
+      <router-link to="/banner/template" tag='i' active-class='active_class' class="iconfont" @click.native="showrouter">&#xe625;</router-link>
+      <router-link to="/banner/layout" tag='i' active-class='active_class' class="iconfont" @click.native="test">&#xe655;</router-link>
+      <router-link to="/banner/bg" tag='i' active-class='active_class' class="iconfont" @click.native="test">&#xe609;</router-link>
     </ul>
     <keep-alive>
       <router-view v-show="is_show" ></router-view>
@@ -17,22 +17,14 @@ export default {
   data () {
     return {
       name: 'side-bar',
-      is_show: true,
-      current_show: null
+      is_show: true
     }
   },
   components: {
     // BG, DesignTemplate
   },
   methods: {
-    show_router: function(e) {
-      if (e.view.location.hash === this.current_show) {
-        this.is_show = !this.is_show
-        this.current_show = e.view.location.hash
-      } else {
-        this.current_show = e.view.location.hash
-      }
-    }
+    test: function() { this.is_show = !this.is_show }
   }
 }
 </script>

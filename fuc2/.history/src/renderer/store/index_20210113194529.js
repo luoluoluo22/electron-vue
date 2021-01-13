@@ -37,11 +37,11 @@ export default new Vuex.Store({
   },
 
   // 异步加载
-  // actions: {
-  //   get_msg_list(store) {
-  //     setTimeout(store.commit('current_page', 'banner1'), 1000)
-  //   }
-
+  actions: {
+    get_msg_list(state) {
+      setTimeout(console.log('msg_list'), 1000)
+    }
+    state.comments(current_page,'a')
   },
 
   modules,

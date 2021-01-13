@@ -17,8 +17,7 @@ export default {
   data () {
     return {
       name: 'side-bar',
-      is_show: true,
-      current_show: null
+      is_show: true
     }
   },
   components: {
@@ -26,12 +25,9 @@ export default {
   },
   methods: {
     show_router: function(e) {
-      if (e.view.location.hash === this.current_show) {
-        this.is_show = !this.is_show
-        this.current_show = e.view.location.hash
-      } else {
-        this.current_show = e.view.location.hash
-      }
+      // this.is_show = !this.is_show
+      console.log(e.view.location.hash)
+      if
     }
   }
 }
